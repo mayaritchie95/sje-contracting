@@ -1,0 +1,13 @@
+# robots.txt for https://www.sjecontracting.com/
+# Allow all reputable crawlers full access to the site.
+
+User-agent: *
+Allow: /
+
+# Block nothing by default. If you add private or staging areas later,
+# disallow them here, for example:
+# Disallow: /admin/
+# Disallow: /staging/
+
+# Point search engines to the sitemap.
+Sitemap: https://www.sjecontracting.com/sitemap.xml
