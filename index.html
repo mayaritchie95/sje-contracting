@@ -507,19 +507,23 @@ footer ul a:hover{color:#fff}
   .proj-grid{grid-template-columns:1fr;gap:28px}
   .row2{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr}
+  footer ul{gap:4px}
+  footer ul a,footer ul span{display:inline-block;padding:9px 0;min-height:40px}
+  .ci-list a{display:inline-block;padding:4px 0}
   .svc-row{grid-template-columns:92px 1fr auto;gap:16px}
   .svc-row .thumb{width:92px;height:70px}
   .form-card{padding:26px 22px}
+  .blurb-more{display:none}
   .hero{min-height:auto}
-  .hero-content{padding:64px 0 96px}
-  .hero-eyebrow{font-size:.68rem;letter-spacing:.16em;margin-bottom:16px}
-  .hero h1{font-size:clamp(2.2rem,9vw,3.1rem);line-height:1.06}
-  .hero-blurb{max-width:none;font-size:1.02rem;line-height:1.6;margin-top:20px}
-  .hero-actions{margin-top:28px;gap:12px;width:100%}
-  .hero-actions .btn{width:100%;justify-content:center}
-  .hero-trust{margin-top:30px;gap:12px;flex-direction:column;align-items:center}
-  .hero-trust li{font-size:.95rem}
-  .hero-scroll{bottom:22px;width:40px;height:40px}
+  .hero-content{padding:52px 22px 84px}
+  .hero-eyebrow{font-size:.62rem;letter-spacing:.14em;margin-bottom:14px}
+  .hero h1{font-size:clamp(2rem,7.8vw,2.7rem);line-height:1.1}
+  .hero-blurb{max-width:34ch;font-size:1.04rem;line-height:1.55;margin:18px auto 0}
+  .hero-actions{margin-top:30px;gap:11px;width:100%;flex-direction:column}
+  .hero-actions .btn{width:100%;justify-content:center;padding:16px 24px;font-size:1.02rem;border-radius:12px}
+  .hero-trust{margin-top:28px;gap:15px;flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+  .hero-trust li{font-size:.98rem;justify-content:flex-start;gap:11px}
+  .hero-scroll{bottom:20px;width:40px;height:40px}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -573,7 +577,7 @@ footer ul a:hover{color:#fff}
   <div class="wrap hero-content">
     <p class="hero-eyebrow">Renovation Specialists · Greater Toronto Area</p>
     <h1>Renovations done&nbsp;right.<br><b>The first time.</b></h1>
-    <p class="hero-blurb">SJE Contracting turns tired, dated spaces into homes you love coming back to. Kitchens, bathrooms, basements and complete home transformations across the GTA, guided personally by Spencer from first walkthrough to final reveal.</p>
+    <p class="hero-blurb">Kitchens, bathrooms, basements and complete home transformations across the GTA.<span class="blurb-more"> We turn tired, dated spaces into homes you love coming back to, guided personally by Spencer from first walkthrough to final reveal.</span></p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#quote">Request a free quote</a>
       <a class="btn btn-hero-line" href="tel:+16475305923">
