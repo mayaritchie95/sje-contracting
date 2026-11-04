@@ -217,13 +217,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero-slide:nth-child(3){animation-delay:12s}
 @keyframes heroFade{0%{opacity:0}5%{opacity:1}28%{opacity:1}33%{opacity:0}100%{opacity:0}}
 .hero-scrim{position:absolute;inset:0;z-index:1;background:
-  linear-gradient(180deg,rgba(14,32,51,.42) 0%,rgba(14,32,51,.32) 42%,rgba(14,32,51,.72) 100%),
-  linear-gradient(90deg,rgba(14,32,51,.5),rgba(14,32,51,.15) 60%)}
-.hero-content{position:relative;z-index:2;padding:120px 0;color:#fff}
-.hero h1{font-size:clamp(2.6rem,6.2vw,5.2rem);line-height:1.02;letter-spacing:-.03em;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.35)}
-.hero h1 b{font-weight:700;color:var(--sky-light)}
-.hero-blurb{font-size:clamp(1.05rem,1.6vw,1.25rem);color:#e8eef4;max-width:52ch;margin:26px 0 0;line-height:1.55;text-shadow:0 1px 14px rgba(0,0,0,.4)}
-.hero-actions{display:flex;flex-wrap:wrap;gap:13px;align-items:center;margin-top:38px}
+  radial-gradient(130% 90% at 50% 42%,rgba(14,32,51,.35) 0%,rgba(14,32,51,.62) 70%,rgba(14,32,51,.82) 100%),
+  linear-gradient(180deg,rgba(14,32,51,.5) 0%,rgba(14,32,51,.2) 30%,rgba(14,32,51,.65) 100%)}
+.hero-content{position:relative;z-index:2;padding:120px 0;color:#fff;text-align:center;max-width:960px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.hero-eyebrow{font-size:clamp(.72rem,1.1vw,.86rem);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sky-light);margin:0 0 22px;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);line-height:1.0;letter-spacing:-.035em;color:#fff;text-shadow:0 2px 34px rgba(0,0,0,.4);margin:0}
+.hero h1 b{font-weight:700;background:linear-gradient(120deg,var(--sky-light),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero-blurb{font-size:clamp(1.05rem,1.55vw,1.3rem);color:#e8eef4;max-width:56ch;margin:28px auto 0;line-height:1.6;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;margin-top:40px}
 .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;border-radius:11px;padding:15px 28px;font-size:1rem;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s,filter .2s,background .2s}
 .btn-primary{background:var(--grad-btn);color:#fff;box-shadow:0 12px 30px rgba(42,111,156,.45)}
 .btn-primary:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 16px 36px rgba(77,165,217,.5)}
@@ -231,6 +232,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .btn-line:hover{border-color:var(--sky-deep);color:var(--sky-deep);transform:translateY(-2px)}
 .btn-hero-line{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
 .btn-hero-line:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+.hero-trust{list-style:none;padding:0;margin:40px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px}
+.hero-trust li{display:inline-flex;align-items:center;gap:9px;color:#dce6f0;font-size:.98rem;font-weight:500;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+.hero-trust svg{width:18px;height:18px;color:var(--sky-light);flex:0 0 18px}
+.hero-scroll{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);z-index:2;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.4);display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.06);backdrop-filter:blur(4px);transition:background .2s,transform .2s;animation:scrollBob 2.4s ease-in-out infinite}
+.hero-scroll:hover{background:rgba(255,255,255,.18)}
+.hero-scroll svg{width:22px;height:22px}
+@keyframes scrollBob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
 
 /* REFERRAL BAND: distinctive pull-quote strip */
 .band{background:var(--navy);color:#fff;position:relative;overflow:hidden}
@@ -431,9 +439,11 @@ footer ul a:hover{color:#fff}
 @keyframes gradientShift{0%{background-position:0% 50%}100%{background-position:200% 50%}}
 @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(77,165,217,.5)}70%{box-shadow:0 0 0 14px rgba(77,165,217,0)}100%{box-shadow:0 0 0 0 rgba(77,165,217,0)}}
 .hero-content>*{opacity:0;animation:rise .7s cubic-bezier(.2,.65,.25,1) forwards}
-.hero-content h1{animation-delay:.12s}
-.hero-content .hero-blurb{animation-delay:.28s}
-.hero-content .hero-actions{animation-delay:.44s}
+.hero-content .hero-eyebrow{animation-delay:.05s}
+.hero-content h1{animation-delay:.15s}
+.hero-content .hero-blurb{animation-delay:.3s}
+.hero-content .hero-actions{animation-delay:.45s}
+.hero-content .hero-trust{animation-delay:.6s}
 
 /* subtle animated gradient on primary buttons (hover only); accent word stays static */
 .btn-primary{background-size:200% auto}
@@ -500,11 +510,15 @@ footer ul a:hover{color:#fff}
   .svc-row .thumb{width:92px;height:70px}
   .form-card{padding:26px 22px}
   .hero{min-height:auto}
-  .hero-content{padding:72px 0 64px}
-  .hero h1{font-size:clamp(2.1rem,8.5vw,3rem);line-height:1.08}
-  .hero-blurb{max-width:none;font-size:1.02rem;line-height:1.65;margin-top:22px}
-  .hero-actions{margin-top:30px;gap:12px}
+  .hero-content{padding:64px 0 96px}
+  .hero-eyebrow{font-size:.68rem;letter-spacing:.16em;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.2rem,9vw,3.1rem);line-height:1.06}
+  .hero-blurb{max-width:none;font-size:1.02rem;line-height:1.6;margin-top:20px}
+  .hero-actions{margin-top:28px;gap:12px;width:100%}
   .hero-actions .btn{width:100%;justify-content:center}
+  .hero-trust{margin-top:30px;gap:12px;flex-direction:column;align-items:center}
+  .hero-trust li{font-size:.95rem}
+  .hero-scroll{bottom:22px;width:40px;height:40px}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -512,6 +526,7 @@ footer ul a:hover{color:#fff}
   .hero-content>*{opacity:1!important;animation:none!important}
   .hero-slide{animation:none!important}
   .hero-slide:nth-child(1){opacity:1!important}
+  .hero-scroll{animation:none!important}
   .svc-row:hover img,.proj:hover img{transform:none}
 }
 </style>
@@ -555,8 +570,9 @@ footer ul a:hover{color:#fff}
   </div>
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap hero-content">
-    <h1>Renovations done right.<br><b>The first time.</b></h1>
-    <p class="hero-blurb">We turn tired, dated spaces into homes you love coming back to. Kitchens, bathrooms, basements and full-home transformations across the Greater Toronto Area, guided personally by Spencer from first walkthrough to final reveal.</p>
+    <p class="hero-eyebrow">Renovation Specialists · Greater Toronto Area</p>
+    <h1>Renovations done&nbsp;right.<br><b>The first time.</b></h1>
+    <p class="hero-blurb">SJE Contracting turns tired, dated spaces into homes you love coming back to. Kitchens, bathrooms, basements and complete home transformations across the GTA, guided personally by Spencer from first walkthrough to final reveal.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#quote">Request a free quote</a>
       <a class="btn btn-hero-line" href="tel:+16475305923">
@@ -564,7 +580,15 @@ footer ul a:hover{color:#fff}
         647-530-5923
       </a>
     </div>
+    <ul class="hero-trust">
+      <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Free, no-pressure quotes</li>
+      <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Fully insured &amp; WSIB covered</li>
+      <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> We show up when we say we will</li>
+    </ul>
   </div>
+  <a class="hero-scroll" href="#services" aria-label="Scroll to see our services">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+  </a>
 </section>
 
 <!-- REFERRAL BAND -->
